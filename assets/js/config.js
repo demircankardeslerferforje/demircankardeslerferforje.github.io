@@ -26,7 +26,7 @@ window.SITE_CONFIG = {
 /* =====================================================================
    GALERİ LİSTESİ
    Fotoğrafları  assets/img/gallery/  klasörüne koyun ve aşağıdaki
-   "src" alanına dosya adını yazın (ör. "assets/img/gallery/ferforje-kapi-1.webp").
+   "src" alanına dosya adını yazın (ör. "assets/img/gallery/demir-kapi-1.webp").
 
    category değerleri (filtre düğmeleri, yalnızca fotoğrafı olanlar görünür):
      celik  → Çelik Konstrüksiyon
