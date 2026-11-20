@@ -1,9 +1,11 @@
-# Demircan Kardeşler Ferforje Sineklik — Web Sitesi
+# Demircan Kardeşler — Demir Doğrama ve Çelik Konstrüksiyon
 
 Tek sayfalık, bağımlılıksız (saf HTML/CSS/JS) tanıtım sitesi. Derleme adımı yoktur; dosyalar olduğu gibi GitHub Pages'te yayınlanır. Yazı tipleri sitenin içinde (`assets/fonts`) durur, dışarıdan hiçbir CDN'e bağlanmaz.
 
 ```
 index.html               → sayfanın kendisi
+sitemap.xml              → arama motorları için site haritası
+robots.txt               → tarama izni ve sitemap adresi
 assets/css/style.css     → tasarım
 assets/js/config.js      → TELEFON, E-POSTA, WHATSAPP MESAJI ve GALERİ LİSTESİ (düzenlenecek tek dosya)
 assets/js/main.js        → menü, galeri, animasyonlar
@@ -14,11 +16,11 @@ assets/img/favicon.svg   → sekme ikonu (DK monogramı)
 
 ## 1. Fotoğraf eklemek
 
-1. Fotoğrafı `assets/img/gallery/` klasörüne koyun. Dosya adında Türkçe karakter ve boşluk kullanmayın (ör. `ferforje-kapi-1.webp`).
+1. Fotoğrafı `assets/img/gallery/` klasörüne koyun. Dosya adında Türkçe karakter ve boşluk kullanmayın (ör. `demir-kapi-1.webp`).
    Önerilen: en fazla ~1600 px, 300 KB altı WebP veya JPG.
 2. `assets/js/config.js` dosyasını açın, `window.GALLERY` listesine bir satır ekleyin:
    ```js
-   { src: "assets/img/gallery/ferforje-kapi-1.webp", title: "Ferforje Kapı", category: "kapi", alt: "Ferforje kapı imalatı" },
+   { src: "assets/img/gallery/demir-kapi-1.webp", title: "Demir Kapı", category: "kapi", alt: "Demir bahçe kapısı imalatı" },
    ```
 3. `category` şu değerlerden biri olmalı: `celik` (Çelik Konstrüksiyon), `cati` (Çatı & Panel), `kapi` (Kapı & Çit), `montaj` (Montaj).
    Filtre düğmeleri yalnızca fotoğrafı olan kategorileri gösterir.
@@ -41,7 +43,7 @@ Telefon numarası ve WhatsApp hazır mesajı da aynı dosyadadır (`phoneDisplay
 2. Bu klasörün **içindekileri** (index.html en üstte olacak şekilde) depoya yükleyin: "Add file → Upload files" ile sürükle-bırak veya `git push`.
 3. Depoda **Settings → Pages → Build and deployment → Source: Deploy from a branch**, Branch: `main`, klasör: `/ (root)` → **Save**.
 4. 1–2 dakika sonra site yayında olur.
-5. Yayın adresi `https://demircankardeslerferforje.github.io/` dışında bir şey olursa `index.html` içindeki `canonical`, `og:url`, `og:image` ve JSON-LD içindeki `url` / `image` satırlarını yeni adresle değiştirin (paylaşım önizlemesi için gerekli).
+5. Yayın adresi `https://demircankardeslerferforje.github.io/` dışında bir şey olursa `index.html` içindeki `canonical`, `og:url`, `og:image` ve JSON-LD içindeki `url` / `image` satırlarını, ayrıca `sitemap.xml` ve `robots.txt` içindeki adresleri yeni adresle değiştirin (paylaşım önizlemesi ve arama motorları için gerekli).
 
 ## Yerelde denemek
 
