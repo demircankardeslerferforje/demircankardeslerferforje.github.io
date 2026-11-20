@@ -14,15 +14,15 @@ assets/img/favicon.svg   → sekme ikonu (DK monogramı)
 
 ## 1. Fotoğraf eklemek
 
-1. Fotoğrafı `assets/img/gallery/` klasörüne koyun. Dosya adında Türkçe karakter ve boşluk kullanmayın (ör. `ferforje-kapi-1.jpg`).
-   Önerilen: yatay, en fazla ~1600 px genişlik, 300 KB altı JPG/WebP.
-2. `assets/js/config.js` dosyasını açın, `window.GALLERY` listesinde ilgili satırın `src` alanını doldurun:
+1. Fotoğrafı `assets/img/gallery/` klasörüne koyun. Dosya adında Türkçe karakter ve boşluk kullanmayın (ör. `ferforje-kapi-1.webp`).
+   Önerilen: en fazla ~1600 px, 300 KB altı WebP veya JPG.
+2. `assets/js/config.js` dosyasını açın, `window.GALLERY` listesine bir satır ekleyin:
    ```js
-   { src: "assets/img/gallery/ferforje-kapi-1.jpg", title: "Ferforje Kapı", category: "ferforje", alt: "Ferforje kapı imalatı" },
+   { src: "assets/img/gallery/ferforje-kapi-1.webp", title: "Ferforje Kapı", category: "kapi", alt: "Ferforje kapı imalatı" },
    ```
-3. Yeni bir iş eklemek için listeye aynı biçimde yeni bir satır ekleyin. `category` şu değerlerden biri olmalı:
-   `ferforje`, `kapi`, `sineklik`, `celik`, `cati`, `hayvancilik`.
-4. `src` boş (`""`) olan öğeler "Fotoğraf yakında" kartı olarak görünür. Fotoğrafı olmayan satırları silebilirsiniz.
+3. `category` şu değerlerden biri olmalı: `celik` (Çelik Konstrüksiyon), `cati` (Çatı & Panel), `kapi` (Kapı & Çit), `montaj` (Montaj).
+   Filtre düğmeleri yalnızca fotoğrafı olan kategorileri gösterir.
+4. Galerinin sonunda “Daha fazlası Instagram'da” kartı otomatik görünür; bağlantı `SITE_CONFIG.instagram` adresine gider.
 
 ## 2. E-posta adresini değiştirmek
 

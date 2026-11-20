@@ -70,6 +70,8 @@
 <!-- ============ HERO ============ -->
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero__bg" aria-hidden="true">
+    <img class="hero__photo" src="assets/img/hero-bg.webp" alt="" width="678" height="900">
+    <div class="hero__shade"></div>
     <div class="hero__glow"></div>
     <div class="hero__grid"></div>
   </div>
@@ -251,6 +253,11 @@
     </header>
 
     <div class="proj">
+      <div class="proj__visual">
+      <figure class="proj__photo">
+        <img src="assets/img/proj-besi-tesisi.webp" alt="Kapalı besi tesisi — çelik konstrüksiyon ve sandviç panel" width="776" height="613" loading="lazy" decoding="async">
+        <figcaption>Kapalı besi tesisi — çelik konstrüksiyon ve sandviç panel</figcaption>
+      </figure>
       <figure class="proj__draw" aria-label="Besi tesisi kesit ve plan teknik çizimi">
         <svg viewBox="0 0 600 470" role="img" aria-label="14 metre açıklıklı, 30 metre uzunluğunda besi tesisinin kesit ve plan çizimi">
           <defs>
@@ -283,8 +290,9 @@
           <path d="M60 450H540M60 443v14M540 443v14" class="d-dim"/><text x="300" y="468" text-anchor="middle" class="t-dim">30,00 m</text>
           <path d="M560 318V430M553 318h14M553 430h14" class="d-dim"/><text x="582" y="378" text-anchor="middle" class="t-dim" transform="rotate(-90 582 378)">14,00 m</text>
         </svg>
-        <figcaption>Şematik çizim — temsilîdir, ölçeksizdir.</figcaption>
+        <figcaption>Şematik kesit ve plan — temsilîdir, ölçeksizdir.</figcaption>
       </figure>
+      </div>
 
       <div class="proj__info">
         <p class="proj__lead">Kırıkkale Aşağı Mahmutlar Mahallesi'nde, çelik taşıyıcı sistem üzerine kurulan 14 × 30 metrelik kapalı besi tesisi.</p>
@@ -318,7 +326,6 @@
     </header>
     <!-- Galeri öğeleri assets/js/config.js içindeki GALLERY listesinden oluşturulur -->
     <div class="gal" id="gallery" aria-live="polite"></div>
-    <p class="gal__note">Güncel işlerimizi <a class="js-ig" href="https://www.instagram.com/demircankardeslerferforje/" target="_blank" rel="noopener">Instagram hesabımızda</a> paylaşıyoruz.</p>
   </div>
 </section>
 
@@ -416,11 +423,19 @@
   <a class="mbar__wa js-wa" href="https://wa.me/905315560444" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
 </div>
 
-<!-- Lightbox (gerçek fotoğraflar eklendiğinde kullanılır) -->
+<!-- Lightbox -->
 <dialog class="lb" id="lightbox" aria-label="Fotoğraf görüntüleyici">
   <button class="lb__x" id="lbClose" aria-label="Kapat">×</button>
-  <img id="lbImg" alt="">
-  <p id="lbCap"></p>
+  <button type="button" class="lb__nav lb__nav--prev" id="lbPrev" aria-label="Önceki fotoğraf">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M15 5 8 12l7 7"/></svg>
+  </button>
+  <figure class="lb__frame">
+    <img id="lbImg" alt="">
+    <figcaption><p id="lbCap"></p><span id="lbCount"></span></figcaption>
+  </figure>
+  <button type="button" class="lb__nav lb__nav--next" id="lbNext" aria-label="Sonraki fotoğraf">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></svg>
+  </button>
 </dialog>
 
 <!-- İkon sprite -->
