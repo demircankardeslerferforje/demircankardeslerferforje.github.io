@@ -26,32 +26,50 @@ window.SITE_CONFIG = {
 /* =====================================================================
    GALERİ LİSTESİ
    Fotoğrafları  assets/img/gallery/  klasörüne koyun ve aşağıdaki
-   "src" alanına dosya adını yazın (ör. "assets/img/gallery/ferforje-kapi-1.jpg").
-   "src" boş ("") bırakılırsa şık bir "fotoğraf yakında" kartı gösterilir.
+   "src" alanına dosya adını yazın (ör. "assets/img/gallery/ferforje-kapi-1.webp").
 
-   category değerleri (filtre düğmeleri bunlardan oluşur):
-     ferforje | kapi | sineklik | celik | cati | hayvancilik
+   category değerleri (filtre düğmeleri, yalnızca fotoğrafı olanlar görünür):
+     celik  → Çelik Konstrüksiyon
+     cati   → Çatı & Panel
+     kapi   → Kapı & Çit
+     montaj → Montaj
    ===================================================================== */
 window.GALLERY = [
-  { src: "", title: "Ferforje Kapı",              category: "ferforje",    alt: "Ferforje kapı imalatı" },
-  { src: "", title: "Balkon Korkuluğu",           category: "ferforje",    alt: "Ferforje balkon korkuluğu" },
-  { src: "", title: "Merdiven Korkuluğu",         category: "ferforje",    alt: "Ferforje merdiven korkuluğu" },
-  { src: "", title: "Pencere Demiri",             category: "ferforje",    alt: "Ferforje pencere demiri" },
-  { src: "", title: "Bahçe Kapısı",               category: "kapi",        alt: "Demir bahçe kapısı" },
-  { src: "", title: "Sineklik",                   category: "sineklik",    alt: "Pencere ve kapı sinekliği" },
-  { src: "", title: "Çelik Konstrüksiyon",        category: "celik",       alt: "Çelik konstrüksiyon taşıyıcı sistem" },
-  { src: "", title: "Sandviç Panel Çatı",         category: "cati",        alt: "Sandviç panel çatı kaplama" },
-  { src: "", title: "Trapez Sac Cephe",           category: "cati",        alt: "Trapez sac cephe kaplama" },
-  { src: "", title: "Kapalı Besi Tesisi — Kırıkkale", category: "hayvancilik", alt: "Kırıkkale Aşağı Mahmutlar kapalı besi tesisi" },
-  { src: "", title: "Kilitli Padok Sistemi",      category: "hayvancilik", alt: "Kilitli padok sistemi" },
-  { src: "", title: "Hangar / Depo",              category: "celik",       alt: "Çelik hangar ve depo yapısı" }
+  {
+    src: "assets/img/gallery/celik-konstruksiyon-montaj.webp",
+    title: "Çelik iskelet montajı",
+    category: "celik",
+    alt: "Açık alanda çelik konstrüksiyon iskeleti kurulurken, işçi platform üzerinde çalışıyor"
+  },
+  {
+    src: "assets/img/gallery/sandvic-panel-cati-kaplama.webp",
+    title: "Sandviç panel çatı",
+    category: "cati",
+    alt: "Çelik çatı makasına sandviç panel yerleştiren usta"
+  },
+  {
+    src: "assets/img/gallery/metal-bahce-kapi.webp",
+    title: "Metal bahçe kapısı",
+    category: "kapi",
+    alt: "Bordo çerçeveli, panelli metal bahçe kapısı"
+  },
+  {
+    src: "assets/img/gallery/celik-yapi-sandvic-panel.webp",
+    title: "Çelik yapı ve sandviç panel",
+    category: "cati",
+    alt: "Çelik konstrüksiyon içinde sıralanmış sandviç paneller"
+  },
+  {
+    src: "assets/img/gallery/kapali-tesis-ic.webp",
+    title: "Kapalı tesis içi",
+    category: "celik",
+    alt: "Tamamlanmış çelik salonun içi: çatı panelleri, kolonlar ve yan kaplama"
+  }
 ];
 
 window.GALLERY_CATEGORIES = {
-  ferforje: "Ferforje",
-  kapi: "Demir Kapı",
-  sineklik: "Sineklik",
-  celik: "Çelik Yapı",
-  cati: "Çatı & Cephe",
-  hayvancilik: "Hayvancılık"
+  celik: "Çelik Konstrüksiyon",
+  cati: "Çatı & Panel",
+  kapi: "Kapı & Çit",
+  montaj: "Montaj"
 };
